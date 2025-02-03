@@ -1,26 +1,43 @@
+let players = ["0","X"]
+var currentPlayer = players[0]
+var counter = 0
+
 export function setupCounter(element: HTMLButtonElement) {
 
-  // let players = ["0","X"]
-  let counter = 0
-  let players = ["0","X"]
-  let currentPlayer = players[0]
-
-  const setCounter = (count: number) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
-  }
 
   const setPlayer = (player: string) => {
+    currentPlayer = player
     if (counter % 2 == 0){
       currentPlayer = players[0]
     } else {
       currentPlayer = players[1]
     }
-    console.log(`player is ${player}`)
   }
+
+  const setCounter = (count: number) => {
+    counter = count
+    if (count == 0){
+    element.innerHTML = "-"
+    } else if (element.innerHTML != "-"){
+    console.log("cannot play here")
+    console.log(`current player: ${currentPlayer}`)
+    counter -= 1
+    } else {
+    element.innerHTML = `${currentPlayer}`
+    console.log(`current player: ${currentPlayer}`)
+    }
+  }
+
+  // const setGameStatus = () => {
+  //   element.innerHTML = `current player: ${currentPlayer} \n current move: ${counter}`
+
+  // }
+
+  // setGameStatus()
 
   element.addEventListener('click', () => setCounter(counter + 1))
   element.addEventListener('click', () => setPlayer(currentPlayer))
+
   setCounter(0)
   setPlayer(players[0])
 }
