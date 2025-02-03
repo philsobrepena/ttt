@@ -19,8 +19,7 @@ export function setupCounter(element: HTMLButtonElement) {
     if (count == 0){
     element.innerHTML = "-"
     } else if (element.innerHTML != "-"){
-    console.log("cannot play here")
-    console.log(`current player: ${currentPlayer}`)
+    console.log(`invalid move! its still your turn: ${currentPlayer}`)
     counter -= 1
     } else {
     element.innerHTML = `${currentPlayer}`

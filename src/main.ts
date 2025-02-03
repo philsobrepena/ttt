@@ -3,7 +3,7 @@ import { setupCounter } from './counter.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <h1>TTT</h1>
+    <h1>ttt</h1>
     <div class="card">
       <div>
         <button id="space1" type="button"></button>
