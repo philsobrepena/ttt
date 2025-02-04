@@ -22,7 +22,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <button id="space9" type="button"></button>
       </div>
       <div id="scores">
-        <p id="scoreboard">text</p>
+        <p id="scoreboard"></p>
       </div>
     </div>
   </div>
