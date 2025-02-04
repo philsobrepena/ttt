@@ -1,3 +1,6 @@
+export let oWin = false
+export let xWin = false
+
 export const clickAction = (element: HTMLButtonElement) => {
 
   element.addEventListener('click', () => {
@@ -42,6 +45,7 @@ export const clickAction = (element: HTMLButtonElement) => {
     )
     {
       console.log(`player 0 wins`)
+      oWin = true
     }
 
     if
@@ -59,6 +63,7 @@ export const clickAction = (element: HTMLButtonElement) => {
     )
     {
       console.log(`player X wins`)
+      xWin = true
     }
 
 
@@ -82,4 +87,3 @@ export const clickAction = (element: HTMLButtonElement) => {
 
 // // 1,5,9
 // // 3,5,7
-//   }
