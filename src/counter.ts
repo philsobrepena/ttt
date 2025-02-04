@@ -1,3 +1,5 @@
+import { clickAction } from "./scoring"
+
 let players = ["0","X"]
 var currentPlayer = players[0]
 var counter = 0
@@ -23,7 +25,7 @@ export function setupCounter(element: HTMLButtonElement) {
     counter -= 1
     } else {
     element.innerHTML = `${currentPlayer}`
-    console.log(`current player: ${currentPlayer}`)
+    console.log(`current player: ${currentPlayer}, current move: ${count}`)
     }
   }
 
@@ -39,4 +41,5 @@ export function setupCounter(element: HTMLButtonElement) {
 
   setCounter(0)
   setPlayer(players[0])
+  clickAction(element)
 }
